@@ -12,7 +12,6 @@ class MonthlyReportTableSeeder extends Seeder
      */
     public function run()
     {
-        //
         factory(MonthlyReport::class, 10)
             ->create();
     }
