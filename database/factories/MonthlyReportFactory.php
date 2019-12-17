@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(MonthlyReport::class, function (Faker $faker) {
     return [
+        'name' => $faker->name,
         'numOfKumite' => $faker->numberBetween(0, 10),
         'numOfNonKumite' => $faker->numberBetween(0, 10),
         'numOfVisitors' => $faker->numberBetween(0, 10),
