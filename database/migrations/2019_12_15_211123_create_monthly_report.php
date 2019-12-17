@@ -15,9 +15,11 @@ class CreateMonthlyReport extends Migration
     {
         Schema::create('monthly_report', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
             $table->integer('numOfKumite');
             $table->integer('numOfNonKumite');
             $table->integer('numOfVisitors');
+            $table->timestamps();
         });
     }
 
