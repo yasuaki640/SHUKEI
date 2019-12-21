@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/admin_index', '\App\Http\Controllers\CrudMonthlyReportController@readAll');
+Route::get('/admin_index', '\App\Http\Controllers\CrudMonthlyReportController@index');
 
 
