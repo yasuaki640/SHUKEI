@@ -9,8 +9,8 @@ class CrudMonthlyReportController extends Controller
 {
     public function index()
     {
-        $monthly_report = DB::table('monthly_report')->get();
-        return view('admin.admin_index', ['monthly_report' => $monthly_report]);
+        $monthly_reports = DB::table('monthly_report')->get();
+        return view('admin.admin_index', ['monthly_reports' => $monthly_reports]);
     }
 
 
