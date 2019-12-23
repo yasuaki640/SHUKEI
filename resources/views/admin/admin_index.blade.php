@@ -11,8 +11,8 @@
             <th scope="col">組手人数</th>
             <th scope="col">未組手人数</th>
             <th scope="col">未組手来場者数</th>
+            <th scope="col">月次報告</th>
             <th scope="col">登録日時</th>
-            <th scope="col">更新日時</th>
         </tr>
         </thead>
         <tbody>
@@ -23,8 +23,8 @@
                 <td>{{$monthly_report->numOfKumite}}</td>
                 <td>{{$monthly_report->numOfNonKumite}}</td>
                 <td>{{$monthly_report->numOfVisitors}}</td>
+                <td>{{date('m',strtotime($monthly_report->created_at))-1}}月分</td>
                 <td>{{$monthly_report->created_at}}</td>
-                <td>{{$monthly_report->updated_at}}</td>
             </tr>
         @endforeach
         </tbody>
