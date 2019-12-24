@@ -23,7 +23,7 @@
                 <td>{{$monthly_report->numOfKumite}}</td>
                 <td>{{$monthly_report->numOfNonKumite}}</td>
                 <td>{{$monthly_report->numOfVisitors}}</td>
-                <td>{{date('m',strtotime($monthly_report->created_at))-1}}月分</td>
+                <td>{{$monthly_report->created_at->format('m')-1}}</td>
                 <td>{{$monthly_report->created_at}}</td>
             </tr>
         @endforeach
