@@ -1,5 +1,7 @@
 <?php
 
+use \Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,6 @@
 |
 */
 
-Route::get('/admin_index', '\App\Http\Controllers\CrudMonthlyReportController@index');
+Route::get('/admin_index', 'CrudMonthlyReportController@index');
 
-
+Route::get('/user_post','CrudMonthlyReportController@post');
