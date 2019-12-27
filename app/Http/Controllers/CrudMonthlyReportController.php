@@ -6,6 +6,7 @@ use App\MonthlyReport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class CrudMonthlyReportController extends Controller
 {
     public function index()
@@ -16,6 +17,16 @@ class CrudMonthlyReportController extends Controller
 
     public function post(Request $request)  //$requestはサービスプロバイダで自動生成される
     {
+        $validate_rule = [
+            'name' => 'required',
+            'numOfKumite' => 'required|numeric',
+            'numOfNonKumite' => 'required|numeric',
+            'numOfVisitors' => 'required|numeric',
+        ];
+
+            $this->validate($request, $validate_rule);
+
+
         return view('user.user_post');
     }
 
