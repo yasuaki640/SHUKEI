@@ -19,7 +19,7 @@ class CrudMonthlyReportController extends Controller
     {
         $validate_rule = [
             'name' => 'required',
-            'numOfKumite' => 'required|numeric',//lll
+            'numOfKumite' => 'required|numeric',
             'numOfNonKumite' => 'required|numeric',
             'numOfVisitors' => 'required|numeric',
         ];
