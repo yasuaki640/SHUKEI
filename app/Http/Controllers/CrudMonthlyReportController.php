@@ -18,4 +18,12 @@ class CrudMonthlyReportController extends Controller
     {
         return view('user.user_post');
     }
+
+    public function confirm(Request $request)
+    {
+        //フォームから受け取ったすべての値を取得しインスタンスに突っ込む
+        $monthly_report = new MonthlyReport($request->all());
+
+        return view('user.user_confirm', ['monthly_report' => $monthly_report,]);
+    }
 }
