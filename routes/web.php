@@ -13,6 +13,6 @@ use \Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('admin_index', 'CrudMonthlyReportController@index');
+Route::get('/admin_index', 'CrudMonthlyReportController@index');
 
-Route::get('user_post','CrudMonthlyReportController@post');
+Route::get('/user_post','CrudMonthlyReportController@post');
