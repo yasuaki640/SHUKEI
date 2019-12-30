@@ -17,4 +17,4 @@ Route::get('/admin_index', 'CrudMonthlyReportController@index');
 
 Route::get('/user_post', 'CrudMonthlyReportController@post');
 
-Route::get('/user_confirm', 'CrudMonthlyReportController@confirm');
+Route::post('/user_confirm', 'CrudMonthlyReportController@confirm');
