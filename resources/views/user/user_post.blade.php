@@ -6,7 +6,7 @@
 
     <h3>{{date("m")-1}} 月分の報告を入力してください</h3>
 
-    <form action="{{url("/user_confirm")}}" method="post">
+    <form action="{{action('CrudMonthlyReportController@confirm')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="name">報告者名</label>
