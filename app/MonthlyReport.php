@@ -9,5 +9,5 @@ class MonthlyReport extends Model
 {
     protected $dates = ['created_at', 'updated_at',];
     protected $table = 'monthly_report';
-    protected $fillable = ['numOfKumite', 'numOfNonKumite', 'numOfVisitors'];
+    protected $fillable = ['name','numOfKumite', 'numOfNonKumite', 'numOfVisitors'];
 }
