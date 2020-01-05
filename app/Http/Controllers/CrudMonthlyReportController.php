@@ -24,7 +24,7 @@ class CrudMonthlyReportController extends Controller
     public function confirm(Request $request)
     {
         //フォームから受け取ったすべての値を取得しインスタンスに突っ込む
-        $monthly_report = new MonthlyReport($request->all());
+        $input = new MonthlyReport($request->all());
 
         $validate_rule = [
             'name' => 'required',
@@ -33,11 +33,8 @@ class CrudMonthlyReportController extends Controller
             'numOfVisitors' => 'required|numeric',
         ];
 
-        try {
-            $this->validate($request, $validate_rule);
-        } catch (ValidationException $e) {
-        }
-        
-        return view('user.user_confirm', ['monthly_report' => $monthly_report,]);
+        $this->validate($request, $validate_rule);
+
+        return view('user.user_confirm', compact('input'));
     }
 }
