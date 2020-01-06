@@ -10,7 +10,7 @@
     <title>SHUKEI - @yield('title')</title>
 </head>
 
-<body>
+<body class="container-md">
 @yield('content')
 </body>
 
