@@ -4,6 +4,8 @@
 
 @section('content')
     @csrf
+
+    <h5 class="text-center my-4">以下の内容で登録します。</h5>
     <table class="table">
         <tbody>
         <tr>
