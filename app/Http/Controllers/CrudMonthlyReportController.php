@@ -37,4 +37,19 @@ class CrudMonthlyReportController extends Controller
 
         return view('user.user_confirm', compact('input'));
     }
+
+    public function create(Request $request)
+    {
+        //セッションから取得
+        $monthly_report = $request->session()->get('input');
+        //DBの更新
+        $monthly_report->save();
+        //ビューの表示
+        return redirect('/complete');
+    }
+
+    /*    public function complete()
+        {
+            return view()
+        }*/
 }
