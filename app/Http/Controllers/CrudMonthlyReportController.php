@@ -41,15 +41,15 @@ class CrudMonthlyReportController extends Controller
     public function create(Request $request)
     {
         //セッションから取得
-        $monthly_report = $request->session()->get('input');
+        $monthly_report = new MonthlyReport($request->all());
         //DBの更新
         $monthly_report->save();
         //ビューの表示
-        return redirect('/complete');
+        return redirect('/user_complete');
     }
 
-    /*    public function complete()
-        {
-            return view()
-        }*/
+    public function complete()
+    {
+        return view('user.user_complete');
+    }
 }
