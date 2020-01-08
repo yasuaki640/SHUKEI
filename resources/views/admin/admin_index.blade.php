@@ -22,7 +22,7 @@
                 <td>{{$monthly_report->numOfKumite}}</td>
                 <td>{{$monthly_report->numOfNonKumite}}</td>
                 <td>{{$monthly_report->numOfVisitors}}</td>
-                <td>{{$monthly_report->created_at->format('m')}}</td>
+                <td>{{$monthly_report->created_at->modify("-1 months")->format('m')}}</td>
                 <td>{{$monthly_report->created_at}}</td>
             </tr>
         @endforeach
