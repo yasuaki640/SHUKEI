@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h3>{{date("m")}} 月分の報告を入力してください</h3>
+    <h3>{{date('m',strtotime('-1 months'))}} 月分の報告を入力してください</h3>
 
     @if($errors->any())
         @foreach($errors->all() as $error)
