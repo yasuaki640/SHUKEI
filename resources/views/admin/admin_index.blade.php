@@ -18,12 +18,11 @@
         <tbody>
         @foreach($monthly_reports as $monthly_report)
             <tr>
-                <th scope="row">{{$monthly_report->id}}</th>
                 <th scope="row">{{$monthly_report->name}}</th>
                 <td>{{$monthly_report->numOfKumite}}</td>
                 <td>{{$monthly_report->numOfNonKumite}}</td>
                 <td>{{$monthly_report->numOfVisitors}}</td>
-                <td>{{$monthly_report->created_at->format('m')-1}}</td>
+                <td>{{$monthly_report->created_at->format('m')}}</td>
                 <td>{{$monthly_report->created_at}}</td>
             </tr>
         @endforeach
