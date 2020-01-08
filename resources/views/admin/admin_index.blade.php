@@ -6,7 +6,6 @@
     <table class="table">
         <thead>
         <tr>
-            <th>id</th>
             <th scope="col">名前</th>
             <th scope="col">組手人数</th>
             <th scope="col">未組手人数</th>
