@@ -52,4 +52,10 @@ class CrudMonthlyReportController extends Controller
     {
         return view('user.user_complete');
     }
+
+    public function showLastMonthReport()
+    {
+        $last_month_report = DB::table('monthly_report')->whereMonth('created_at', now()->modify('-1 months')->format('m')); //TODO 先月分の月次報告を検索させる。
+        return view('admin.admin_show');
+    }
 }
