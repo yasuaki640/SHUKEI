@@ -53,9 +53,9 @@ class CrudMonthlyReportController extends Controller
         return view('user.user_complete');
     }
 
-    public function showLastMonthReport()
+    public function viewLastMonthReport()
     {
-        $last_month_report = DB::table('monthly_report')->whereMonth('created_at', now()->modify('-1 months')->format('m')); //TODO 先月分の月次報告を検索させる。
+        $last_month_report = DB::table('monthly_report')->whereMonth('created_at', now()->modify('-1 months')); //TODO 先月分の月次報告を検索させる。
         return view('admin.admin_show');
     }
 }
