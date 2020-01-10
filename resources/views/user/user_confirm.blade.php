@@ -26,6 +26,8 @@
             </tr>
             </tbody>
         </table>
+
+        {{--    セッションに確認画面で表示された画面を渡す。    --}}
         <input type="hidden" name="name" value="{{$input->name}}">
         <input type="hidden" name="numOfKumite" value="{{$input->numOfKumite}}">
         <input type="hidden" name="numOfNonKumite" value="{{$input->numOfNonKumite}}">
