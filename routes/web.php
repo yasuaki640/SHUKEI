@@ -22,3 +22,6 @@ Route::get('/user_post', 'CrudMonthlyReportController@post');
 Route::post('/user_confirm', 'CrudMonthlyReportController@confirm');
 Route::post('/user_create', 'CrudMonthlyReportController@create');
 Route::get('/user_complete', 'CrudMonthlyReportController@complete');
+
+//月次報告表示画面
+Route::get('/user_view_monthly_report', 'CrudMonthlyReportController@viewLastMonthReport');
