@@ -4,10 +4,10 @@
 --}}
 @extends('layouts.common_layout')
 
-@section('title',  date('m',strtotime('-1 months')) . "月次報告")
+@section('title',  date('m',strtotime('-2 months')) . "月次報告")
 
 @section('content')
-    <h5 class="text-center my-4">{{date('m',strtotime('-1 months'))}}月分報告</h5>
+    <h5 class="text-center my-4">{{date('m',strtotime('-2 months'))}}月分報告</h5>
     <table class="table">
         <thead>
         <tr>
@@ -15,7 +15,6 @@
             <th scope="col">組手人数</th>
             <th scope="col">未組手人数</th>
             <th scope="col">未組手来場者数</th>
-            <th scope="col">月次報告</th>
             <th scope="col">登録日時</th>
         </tr>
         </thead>
@@ -26,7 +25,6 @@
                 <td>{{$last_month_report->numOfKumite}}</td>
                 <td>{{$last_month_report->numOfNonKumite}}</td>
                 <td>{{$last_month_report->numOfVisitors}}</td>
-                <td>{{$last_month_report->created_at->modify("-1 months")->format('m')}}</td>
                 <td>{{$last_month_report->created_at}}</td>
             </tr>
         @endforeach
