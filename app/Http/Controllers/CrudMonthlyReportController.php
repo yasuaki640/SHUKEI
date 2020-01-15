@@ -48,8 +48,9 @@ class CrudMonthlyReportController extends Controller
         return redirect('/user_complete');
     }
 
-    public function complete()
+    public function complete(Request $request)
     {
+        $request->session()->regenerateToken();
         return view('user.user_complete');
     }
 
