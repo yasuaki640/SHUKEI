@@ -13,12 +13,12 @@ class CrudMonthlyReportController extends Controller
     public function index()
     {
         $monthly_reports = MonthlyReport::all();
-        return view('admin.admin_index', ['monthly_reports' => $monthly_reports]);
+        return view('admin.index', ['monthly_reports' => $monthly_reports]);
     }
 
     public function post(Request $request)  //$requestはサービスプロバイダで自動生成される
     {
-        return view('user.user_post');
+        return view('user.post');
     }
 
     public function confirm(Request $request)
@@ -35,7 +35,7 @@ class CrudMonthlyReportController extends Controller
 
         $this->validate($request, $validate_rule);
 
-        return view('user.user_confirm', compact('input'));
+        return view('user.confirm', compact('input'));
     }
 
     public function create(Request $request)
@@ -45,18 +45,18 @@ class CrudMonthlyReportController extends Controller
         //DBの更新
         $monthly_report->save();
         //ビューの表示
-        return redirect('/user_complete');
+        return redirect('/user/complete');
     }
 
     public function complete(Request $request)
     {
         $request->session()->regenerateToken();
-        return view('user.user_complete');
+        return view('user.complete');
     }
 
     public function viewLastMonthReport()
     {
         $last_month_reports = MonthlyReport::whereMonth('created_at', now()->modify('-1 months'))->get();
-        return view('user.user_view_monthly_report', compact('last_month_reports'));
+        return view('user.view_monthly_report', compact('last_month_reports'));
     }
 }

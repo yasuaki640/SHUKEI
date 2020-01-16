@@ -14,14 +14,14 @@ use \Illuminate\Support\Facades\Route;
 */
 
 //管理者画面
-Route::get('/admin_index', 'CrudMonthlyReportController@index');
+Route::get('/admin/index', 'CrudMonthlyReportController@index');
 
 
 //月次報告登録画面
-Route::get('/user_post', 'CrudMonthlyReportController@post');
-Route::post('/user_confirm', 'CrudMonthlyReportController@confirm');
-Route::post('/user_create', 'CrudMonthlyReportController@create');
-Route::get('/user_complete', 'CrudMonthlyReportController@complete');
+Route::get('/user/post', 'CrudMonthlyReportController@post');
+Route::post('/user/confirm', 'CrudMonthlyReportController@confirm');
+Route::post('/user/create', 'CrudMonthlyReportController@create');
+Route::get('/user/complete', 'CrudMonthlyReportController@complete');
 
 //月次報告表示画面
-Route::get('/user_view_monthly_report', 'CrudMonthlyReportController@viewLastMonthReport');
+Route::get('/user/view_monthly_report', 'CrudMonthlyReportController@viewLastMonthReport');
