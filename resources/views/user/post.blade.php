@@ -11,7 +11,7 @@
             <ul class="text-danger">{{$error}}</ul>
         @endforeach
     @endif
-    <form action="{{url('/user_confirm')}}" method="post">
+    <form action="{{action('CrudMonthlyReportController@confirm')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="name">報告者名</label>

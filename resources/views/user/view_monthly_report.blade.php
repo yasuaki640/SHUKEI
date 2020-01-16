@@ -1,7 +1,3 @@
-{{--
-@php(var_dump($last_month_reports))
-@php(exit())
---}}
 @extends('layouts.common_layout')
 
 @section('title',  date('m',strtotime('-2 months')) . "月次報告")
