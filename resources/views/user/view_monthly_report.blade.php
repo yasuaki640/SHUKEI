@@ -1,9 +1,9 @@
 @extends('layouts.common_layout')
 
-@section('title',  date('m',strtotime('-2 months')) . "月次報告")
+@section('title',  date('m',strtotime('-1 months')) . "月次報告")
 
 @section('content')
-    <h5 class="text-center my-4">{{date('m',strtotime('-2 months'))}}月分報告</h5>
+    <h5 class="text-center my-4">{{date('m',strtotime('-1 months'))}}月分報告</h5>
     <table class="table">
         <thead>
         <tr>
