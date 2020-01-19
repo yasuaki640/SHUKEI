@@ -56,7 +56,7 @@ class CrudMonthlyReportController extends Controller
 
     public function viewLastMonthReport()
     {
-        $last_month_reports = MonthlyReport::whereMonth('created_at', now()->modify('-1 months'))->get();
+        $last_month_reports = MonthlyReport::whereMonth('created_at', now())->get();
         return view('user.view_monthly_report', compact('last_month_reports'));
     }
 }
