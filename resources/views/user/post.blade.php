@@ -32,6 +32,6 @@
             <input type="number" class="form-control" name="numOfVisitors"
                    value="{{old('numOfVisitors')}}">
         </div>
-        <button type="submit" class="btn btn-primary" value="post">確認</button>
+        <button type="submit" class="btn btn-block btn-primary" value="post">確認</button>
     </form>
 @endsection

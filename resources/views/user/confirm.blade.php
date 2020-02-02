@@ -32,7 +32,7 @@
         <input type="hidden" name="numOfKumite" value="{{$input->numOfKumite}}">
         <input type="hidden" name="numOfNonKumite" value="{{$input->numOfNonKumite}}">
         <input type="hidden" name="numOfVisitors" value="{{$input->numOfVisitors}}">
-        <button type="submit" class="btn btn-primary" value="post">登録</button>
+        <button type="submit" class="btn btn-block btn-primary" value="post">登録</button>
     </form>
 
 
