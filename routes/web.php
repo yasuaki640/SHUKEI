@@ -16,7 +16,8 @@ use \Illuminate\Support\Facades\Route;
 //管理者画面
 Route::get('/admin/index', 'CrudMonthlyReportController@index');
 
-
+//ユーザーメニュー画面
+Route::get('/user/index', 'CrudMonthlyReportController@index_user');
 //月次報告登録画面
 Route::get('/user/post', 'CrudMonthlyReportController@post');
 Route::post('/user/confirm', 'CrudMonthlyReportController@confirm');
