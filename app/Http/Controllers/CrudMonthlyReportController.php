@@ -16,7 +16,7 @@ class CrudMonthlyReportController extends Controller
         return view('admin.index', ['monthly_reports' => $monthly_reports]);
     }
 
-    public function index_user()
+    public function user_index()
     {
         return view('user.index');
     }
