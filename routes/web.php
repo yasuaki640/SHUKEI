@@ -13,11 +13,8 @@ use \Illuminate\Support\Facades\Route;
 |
 */
 
-//管理者画面
-Route::get('/admin/index', 'CrudMonthlyReportController@index');
-
-
 //月次報告登録画面
+Route::get('/user/index', 'CrudMonthlyReportController@index');
 Route::get('/user/post', 'CrudMonthlyReportController@post');
 Route::post('/user/confirm', 'CrudMonthlyReportController@confirm');
 Route::post('/user/create', 'CrudMonthlyReportController@create');
