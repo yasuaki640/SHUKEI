@@ -16,6 +16,11 @@ class CrudMonthlyReportController extends Controller
         return view('admin.index', ['monthly_reports' => $monthly_reports]);
     }
 
+    public function index_user()
+    {
+        return view('user.index');
+    }
+
     public function post(Request $request)  //$requestはサービスプロバイダで自動生成される
     {
         return view('user.post');
